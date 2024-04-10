@@ -57,7 +57,7 @@ main {
     grid-template-columns: auto auto auto auto;
 }
 
-.button {
+.button-1, .button-2, .button-3 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -66,21 +66,50 @@ main {
     height: 55.5px;
     width: 55.5px;
     margin: 5px;
-    border-radius: 10px;
-
-    /*button color*/
-    background: rgb(37,123,201);
-    background: linear-gradient(180deg, rgba(37,123,201,1) 0%, rgba(23,73,118,1) 15%, rgba(35,112,179,1) 85%, rgba(0,47,89,1) 100%);
+    border-radius: 15px;
 
     /*shadow*/
     box-shadow: 0px 10px 15px 7px rgba(0,0,0,0.1);
 }
 
-.button:hover {
-    background: rgb(93, 156, 214);
+.button-1 {
+    background: rgb(37,123,201);
+    background: linear-gradient(180deg, rgba(37,123,201,1) 0%, rgba(25,78,125,1) 15%, rgba(35,112,179,1) 85%, rgba(0,45,89,1) 100%);
 }
 
-.button:active {
-    background: rgb(16, 53, 87);
-    color: white;
+.button-1:hover {
+    filter: brightness(1.75);
+}
+
+.button-1:active {
+    border: 5px solid #1F2831;
+}
+
+.button-2 {
+    background: rgb(23,53,82);
+    background: linear-gradient(180deg, rgba(23,53,82,1) 0%, rgba(29,47,61,1) 15%, rgba(41,67,90,1) 85%, rgba(10,25,39,1) 100%);
+}
+
+.button-2:hover {
+    filter: brightness(1.75);
+}
+
+.button-2:active {
+    border: 5px solid #1F2831;
+}
+
+.button-3 {
+    background: rgb(246,255,185);
+    background: linear-gradient(180deg, rgba(246,255,185,1) 0%, rgba(147,182,115,1) 15%, rgba(214,240,167,1) 85%, rgba(113,149,84,1) 100%);
+    color: #1F2831;
+}
+
+.button-3:hover {
+    filter: brightness(1.2);
+    color: #1F2831;
+}
+
+.button-3:active {
+    border: 5px solid #1F2831;
+    color: #1F2831;
 }
