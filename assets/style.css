@@ -1,3 +1,6 @@
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 /* reset css start*/
 /*
   Josh's Custom CSS Reset
@@ -8,7 +11,6 @@
   }
   * {
     margin: 0;
-    font: normal normal 400 25px/30px "Roboto", sans-serif;
   }
   body {
     line-height: 1.5;
@@ -29,22 +31,55 @@
   }
 /* reset css end*/
 
-/* font */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
 main {
     width: 290px;
     height: 560px;
     margin: 25px auto 0;
-    border: 1px solid black;
+    outline: 10px solid #222831;
     background: rgb(255,255,255);
     background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(222,222,222,1) 58%, rgba(255,255,255,1) 83%);
     border-radius: 15px;
+    box-shadow: 0px 11px 8px -3px rgba(0,0,0,0.1);
 }
 
 .screen {
+    position: relative;
     height: 200px;  
     border-radius: 15px;
+}
+
+header {
+  position: absolute;
+  top: 7%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  /*font*/
+  font: normal normal 700 25px/30px "Roboto", sans-serif;
+}
+
+.menu {
+  position: absolute;
+  top: 5%;
+  left: 90%;
+  transform: translate(-50%, -50%);
+  margin: 5px auto;
+  border: none;
+  background-color: transparent;
+  /*font*/
+  font: normal normal 700 25px/30px "Roboto", sans-serif;
+}
+
+.text-input {
+  position: absolute;
+  top: 15%;
+  height: 169px;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  text-align: right;
+  padding: 12px;
+  /*font*/
+  font: normal normal 900 50px/30px "Roboto", sans-serif;
 }
 
 .button-container {
@@ -61,7 +96,7 @@ main {
     grid-template-columns: auto auto auto auto;
 }
 
-.button-1, .button-2, .button-3 {
+.button-1, .button-2, .button-3, .button-4 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -71,49 +106,34 @@ main {
     width: 55.5px;
     margin: 5px;
     border-radius: 15px;
-
+    /*font*/
+    font: normal normal 400 25px/30px "Roboto", sans-serif;
     /*shadow*/
-    box-shadow: 0px 10px 15px 7px rgba(0,0,0,0.1);
+    box-shadow: 0px 11px 8px -3px rgba(0,0,0,0.1);
 }
 
 .button-1 {
-    background: rgb(37,123,201);
-    background: linear-gradient(180deg, rgba(37,123,201,1) 0%, rgba(25,78,125,1) 15%, rgba(35,112,179,1) 85%, rgba(0,45,89,1) 100%);
-}
-
-.button-1:hover {
-    filter: brightness(1.75);
-}
-
-.button-1:active {
-    border: 5px solid #1F2831;
+    background: rgb(25,78,125);
 }
 
 .button-2 {
-    background: rgb(23,53,82);
-    background: linear-gradient(180deg, rgba(23,53,82,1) 0%, rgba(29,47,61,1) 15%, rgba(41,67,90,1) 85%, rgba(10,25,39,1) 100%);
-}
-
-.button-2:hover {
-    filter: brightness(1.75);
-}
-
-.button-2:active {
-    border: 5px solid #1F2831;
+  background: rgb(29,47,61);
 }
 
 .button-3 {
-    background: rgb(246,255,185);
-    background: linear-gradient(180deg, rgba(246,255,185,1) 0%, rgba(147,182,115,1) 15%, rgba(214,240,167,1) 85%, rgba(113,149,84,1) 100%);
-    color: #1F2831;
+  background: rgb(174, 187, 93);
+  color: #1F2831;
 }
 
-.button-3:hover {
-    filter: brightness(1.2);
-    color: #1F2831;
+.button-4 {
+background: rgb(233, 103, 71);
 }
 
-.button-3:active {
-    border: 5px solid #1F2831;
-    color: #1F2831;
+.button-1:hover, .button-2:hover, .button-3:hover, .button-4:hover {
+    filter: brightness(1.75);
+    cursor: pointer;
+}
+
+.button-1:active, .button-2:active, .button-3:active, .button-4:active {
+    border: 5px solid #fff;
 }
