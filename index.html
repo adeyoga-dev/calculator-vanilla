@@ -13,31 +13,31 @@
         <section class="screen">
             <header>Casio</header>
             <input type="button" value="=" class="menu">
-            <div class="text-input">0</div>
-            <div class="text-result">0</div>
+            <div class="text-input" id="text-input"></div>
+            <div class="text-result" id="text-result"></div>
         </section>
         <section class="button-container">
             <div class="button-pack">
-                <input type="button" class="button-4" value="C">
-                <input type="button" class="button-1" value="%">
-                <input type="button" class="button-4" value="D">
-                <input type="button" class="button-1" value="÷">
-                <input type="button" class="button-2" value="7">
-                <input type="button" class="button-2" value="8">
-                <input type="button" class="button-2" value="9">
-                <input type="button" class="button-1" value="X">
-                <input type="button" class="button-2" value="4">
-                <input type="button" class="button-2" value="5">
-                <input type="button" class="button-2" value="6">
-                <input type="button" class="button-1" value="-">
-                <input type="button" class="button-2" value="1">
-                <input type="button" class="button-2" value="2">
-                <input type="button" class="button-2" value="3">
-                <input type="button" class="button-1" value="+">
-                <input type="button" class="button-2" value="00">
-                <input type="button" class="button-2" value="0">
-                <input type="button" class="button-2" value=".">
-                <input type="button" class="button-3" value="=">
+                <input type="button" class="button-4" value="C" onclick="getValue(this)">
+                <input type="button" class="button-1" value="%" onclick="getValue(this)">
+                <input type="button" class="button-4" value="D" onclick="getValue(this)">
+                <input type="button" class="button-1" value="÷" onclick="getValue(this)">
+                <input type="button" class="button-2" value="7" onclick="getValue(this)">
+                <input type="button" class="button-2" value="8" onclick="getValue(this)">
+                <input type="button" class="button-2" value="9" onclick="getValue(this)">
+                <input type="button" class="button-1" value="x" onclick="getValue(this)">
+                <input type="button" class="button-2" value="4" onclick="getValue(this)">
+                <input type="button" class="button-2" value="5" onclick="getValue(this)">
+                <input type="button" class="button-2" value="6" onclick="getValue(this)">
+                <input type="button" class="button-1" value="-" onclick="getValue(this)">
+                <input type="button" class="button-2" value="1" onclick="getValue(this)">
+                <input type="button" class="button-2" value="2" onclick="getValue(this)">
+                <input type="button" class="button-2" value="3" onclick="getValue(this)">
+                <input type="button" class="button-1" value="+" onclick="getValue(this)">
+                <input type="button" class="button-2" value="00" onclick="getValue(this)">
+                <input type="button" class="button-2" value="0" onclick="getValue(this)">
+                <input type="button" class="button-2" value="." onclick="getValue(this)">
+                <input type="button" class="button-3" value="=" onclick="beginCount()">
             </div>
         </section>
     </main>
