@@ -72,14 +72,30 @@ header {
 .text-input {
   position: absolute;
   top: 15%;
-  height: 169px;
+  height: 90px;
   width: 100%;
   background-color: transparent;
-  border: none;
   text-align: right;
+  overflow: hidden;
   padding: 12px;
   /*font*/
-  font: normal normal 900 50px/30px "Roboto", sans-serif;
+  font: normal normal 700 60px/30px "Roboto", sans-serif;
+  word-wrap: break-word;
+}
+
+.text-result {
+  position: absolute;
+  top: 50%;
+  height: 100px;
+  width: 100%;
+  background-color: transparent;
+  text-align: right;
+  overflow: hidden;
+  padding: 30px 12px 0px 12px;
+  /*font*/
+  font: normal normal 700 70px/30px "Roboto", sans-serif;
+  word-wrap: break-word;
+  color: #194E7D;
 }
 
 .button-container {
