@@ -1,14 +1,22 @@
 let value = "";
 let first_character = 0;
+let dump_value = "";
 // inislalisasi element
 let text_input = document.getElementById("text-input");
 let text_result = document.getElementById("text-result");
 
 function getValue(element){
     let length = value.length;
-    if(!isNumber(element.value) && value==="" || element.value==="." && value==="") return false;
-    if(length>=48) return false; //jika lebih dari sama dengan 48 karakter jangan simpan value dan print screen
+    //validasi data dan aksi
+    if(!isNumber(element.value) && value==="") return;
+    if(element.value==="." && value==="") return;
+    if(element.value==="C") return;
+    if(element.value==="D") return;
+    if(!isNumber(dump_value) && !isNumber(element.value)) return;
+    if(dump_value == "." && element.value == ".") return;
+    if(length>=48) return; //jika lebih dari sama dengan 48 karakter jangan simpan value dan print screen
     value += element.value;
+    dump_value = element.value;
     printValue(value);
 }
 
@@ -18,7 +26,7 @@ function printValue(value){
         text_input.style.fontSize = "30px";
     }else if(length>=24){ //jika lebih dari sama dengan 24 karakter kurangi ukuran font
         text_input.style.fontSize = "15px";
-    }else{
+    }else{ //jika normal kembali ke ukuran normal
         text_input.style.fontSize = "60px";
     }
     text_input.innerHTML = value;
@@ -30,8 +38,8 @@ function printResult(value){
         text_result.style.fontSize = "30px";
     }else if(length>=24){ //jika lebih dari sama dengan 24 karakter kurangi ukuran font
         text_result.style.fontSize = "15px";
-    }else{
-        text_result.style.fontSize = "60px";
+    }else{//jika normal kembali ke ukuran normal
+        text_result.style.fontSize = "70px";
     }
     text_result.innerHTML = value;
 }
