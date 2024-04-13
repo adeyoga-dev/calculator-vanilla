@@ -34,6 +34,7 @@ function printValue(value){
 
 function printResult(value){
     let length = value.toString().length;
+    //if(isOperator(value[length]) == true) return;
     if(length>=6 && length<24){ //jika lebih dari sama dengan 6 karakter kurangi ukuran font
         text_result.style.fontSize = "30px";
     }else if(length>=24){ //jika lebih dari sama dengan 24 karakter kurangi ukuran font
@@ -48,6 +49,7 @@ function beginCount(){
     let length = value.length;
     let data_dump = [];
     let character_dump = "";
+    if(isOperator(value.charAt(length-1))) return;
     for(let i=0; i<length+1; i++){
         let number = value.charAt(i);
         if(isNumber(number)){
@@ -59,6 +61,7 @@ function beginCount(){
         }
     }
     data_dump = deleteLastArray(data_dump);
+    
     arithmeticOperation(data_dump);
     
 }
@@ -103,6 +106,15 @@ function isNumber(number){
     let length = number_list.length;
     for(let i=0; i<length; i++){
         if(number == number_list.charAt(i)) return true;
+    }
+    return false;
+}
+
+function isOperator(operator){
+    let operator_list = "+-x÷%.";
+    let length = operator_list.length;
+    for(let i=0; i<length; i++){
+        if(operator == operator_list.charAt(i)) return true;
     }
     return false;
 }
