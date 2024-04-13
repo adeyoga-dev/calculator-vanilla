@@ -127,3 +127,13 @@ function deleteLastArray(array){
     }
     return array_dump;
 }
+
+function deleteContent(){
+    let length = value.length;
+    let dump = "";
+    for(let i=0; i<length-1; i++){
+        dump += value.charAt(i);
+    }
+    value = dump;
+    printValue(dump);
+}
